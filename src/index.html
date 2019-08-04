@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        body {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+        border: 1px solid #ccc;
+        height: 600px;
+        width: 1000px;
+        margin: 20px auto;
+        position: relative;
+    }
+    .dot {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 100px;
+        display: inline-block;
+        background: red;
+        font-size: 12px;
+        color: #ccc;
+    }
+    .box2{
+        border: 1px solid #ccc;
+        height: 600px;
+        width: 1000px;
+        /* margin: 20px auto; */
+        /* position: relative; */
+        /* top: -640px; */
+    }
+    .moving {
+        width: 149px;
+        height: 149px;
+        border-radius: 75px;
+        display: inline-block;
+        background: red;
+        font-size: 12px;
+        color: #ccc;
+        /* position: absolute; */
+        /* float: right; */
+        /* transform: translate(110px,100px); */
+        /* transition: all 1s; */
+    }
+
+    .bg {
+        width: 450px;
+        height: 450px;
+        /* background: url('./img/bg.jpeg');
+         */
+        background-color: bisque;
+        /* background-size: 50% 50%; */
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg>div {
+        width: 149px;
+        height: 149px;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+
+    .content {
+        height: 500px;
+        width: 1px;
+    }
+    </style>
+</head>
+<body>
+    <!-- <div class="box" id="oneBezier"></div>
+    <div class="box" id="twoBezier"></div>-->
+    <!-- <div class="box" id="threeBezier"></div>  -->
+    <div class="moving"></div>
+    <div class="content"></div>
+    <div class="bg">
+        <div class="taget1"></div>
+        <div class="taget2"></div>
+        <div class="taget3"></div>
+        <div class="taget4"></div>
+        <div class="taget5"></div>
+        <div class="taget6"></div>
+        <div class="taget7"></div>
+        <div class="taget8"></div>
+        <div class="taget9"></div>
+    </div>
+</body>
+</html>
