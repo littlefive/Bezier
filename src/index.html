@@ -38,17 +38,35 @@
         /* top: -640px; */
     }
     .moving {
-        width: 149px;
+        /* width: 149px;
         height: 149px;
-        border-radius: 75px;
+        /* border-radius: 75px; 
         display: inline-block;
-        background: red;
+        background: #c3bebe;
         font-size: 12px;
-        color: #ccc;
+        color: #ccc; */
         /* position: absolute; */
         /* float: right; */
         /* transform: translate(110px,100px); */
         /* transition: all 1s; */
+    }
+    .animate {
+        width: 149px;
+        height: 149px;
+        /* border-radius: 75px; */
+        display: inline-block;
+        background: #c3bebe;
+        font-size: 12px;
+        color: #ccc;
+        
+    }
+    .animate.active {
+        transform: rotate(360deg);
+        animation: rotation 4s linear infinite;
+    }
+    @-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(270deg);}
     }
 
     .bg {
@@ -70,7 +88,7 @@
     }
 
     .content {
-        height: 500px;
+        height: 200px;
         width: 1px;
     }
     </style>
@@ -79,7 +97,9 @@
     <!-- <div class="box" id="oneBezier"></div>
     <div class="box" id="twoBezier"></div>-->
     <!-- <div class="box" id="threeBezier"></div>  -->
-    <div class="moving"></div>
+    <div class="moving">
+        <div class="animate active"></div>
+    </div>
     <div class="content"></div>
     <div class="bg">
         <div class="taget1"></div>

@@ -3,10 +3,10 @@ import bezier from './bezier';
 let $event = $(".moving");
 
 $(function() {
-    const p1 = [1, 2];
+    const p1 = [1000, 0];
     // const p2 = [1000, 600];
-    const p2 = [300, 654]
-    const c1 = [1000, 0];
+    const p2 = [300, 354]
+    const c1 = [500, 0];
     const c2 = [0, 600];
 
     // // 一阶贝塞尔
@@ -39,10 +39,13 @@ $(function() {
 
         let x = $event.offset().top;
         let y = $event.offset().left;
-        let arr = bezier.getBezierPoints(dotNumber, p1, c1, c2, p2);
+        let arr = bezier.getBezierPoints(dotNumber, p1, c1, p2);
         console.log(arr)
         let i = 0;
         let interval = setInterval(()=>{
+            if($event.offset().top==354) {
+                $('.animate').removeClass('active')
+            }
             if(i >= (arr.length)) {
                 clearInterval(interval)
             }
