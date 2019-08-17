@@ -77,6 +77,11 @@ export default {
             filename: 'index.html',
             chunks: ['index']
         }),
+        new HtmlWebpackPlugin({
+            template: resolve(src + '/demo.html'),
+            filename: 'demo.html',
+            chunks: ['demo']
+        }),
         new CopyWebpackPlugin([
             {
                 from: resolve(src + '/assets'),

@@ -7,7 +7,8 @@ import webpackMerge from 'webpack-merge';
 
 export default webpackMerge(baseConfig, {
     entry: {
-        index: resolve(src + '/index.js') // 主网站入口
+        index: resolve(src + '/index.js'), // 主网站入口
+        demo: resolve(src + '/demo.js')
     },
     module: {
         rules: [

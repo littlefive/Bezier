@@ -10,7 +10,7 @@ $(function() {
     const c2 = [0, 600];
 
     // // 一阶贝塞尔
-    const dotNumber = 55;
+    const dotNumber = 10;
     let shtml = '';
     // bezier.getBezierPoints(dotNumber, p1, p2).forEach(d => {
     //     d = d.map(e => parseInt(e, 10));
