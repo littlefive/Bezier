@@ -1,16 +1,15 @@
 $(function () {
     $(document).on('click', '.start', function () {
-        // $('.ball').addClass('run_top_right');
-        moving($('.ball'), $('.taget1'));
+        moving($('.ball'), $('.taget3'));
         $('.rotate').addClass('active');
     })
     $(document).on('click', '.start2', function () {
-        // $('.ball').addClass('run_top_right');
         moving($('.ball'), $('.taget2'));
         $('.rotate').addClass('active');
     })
     $(document).on('click', '.clear', function () {
         $('.ball').removeClass('run_top_right');
+        ball.setAttribute('style', '')
         $('.rotate').removeClass('active');
     })
     var o = document.getElementById("ball");
@@ -18,7 +17,6 @@ $(function () {
     o.addEventListener("webkitAnimationEnd", function () {
         if ($('.ball').offset().top == $('.taget3').offset().top) {
             $('.rotate').removeClass('active');
-            // ball.setAttribute('style','');
         }
     })
     
@@ -32,6 +30,7 @@ $(function () {
         sport(fromX, fromY, toX, toY);
     }
     const style = document.createElement('style');
+    const ball = document.getElementById('ball');
 
     // 运动
     function sport(fromX, fromY, toX, toY) {
@@ -53,12 +52,11 @@ $(function () {
         style.innerHTML = runkeyframes;
         // 将style样式存放到head标签
         document.getElementsByTagName('head')[0].appendChild(style);
-        const ball = document.getElementById('ball');
         // 随便给一个animation的名称
         // ball.setAttribute('style','animaition: ball-run1 10s infinite;');
         setTimeout(_=>{
         // 1ms后纠正animation的名称
-        ball.setAttribute('style','animation: run-left-bottom 2s cubic-bezier(0, 0, .58, 1);animation-fill-mode: forwards;');
-        },1)
+        ball.setAttribute('style','animation: run-left-bottom 1s cubic-bezier(0, 0, .58, 1);animation-fill-mode: forwards;');
+        },0)
     }
 })
